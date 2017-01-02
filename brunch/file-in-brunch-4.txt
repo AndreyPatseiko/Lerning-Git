@@ -1,1 +1,2 @@
-BRUNCH - master brunches chsnges
+Conflict for brunch
+another text
