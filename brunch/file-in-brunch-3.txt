@@ -1,2 +1,2 @@
-Conflict for naster brunch
-another text
+resolve conflict - brunch
+second schange on brunches
