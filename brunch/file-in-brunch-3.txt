@@ -1,1 +1,2 @@
-BRUNCH - master brunch
+Conflict for naster brunch
+another text
