@@ -1,0 +1,43 @@
+Git update/push without conflicts (almost): 
+
+инструкция к ипользованию Git
+
+...all repo got... 
+1. git checkout -b local-branch -- make separate local branch named 'local-branch' (can be various name) and go on (-b first create) 
+    - разделить локальную ветку под нозванием 'local-branch' (могут быть разные названия) и перейти на (-b первую созданную) 
+2. git fetch (not pull!!!) -- getting last modification from remote server 
+
+3. git rebase origin/master -- rebase our changes on top commits remote master branch 
+ 
+...working in previous created branch... 
+
+...ready for commit... 
+ 
+4. git add . -- stage all our changes  // просто перекидываем файлы в stage
+
+5. git stash save -- stashing all modification in comparison last commit 
+
+6. git fetch (not pull!!!) -- getting last modification from remote server // делаем fetch для забора последних измений без перезаписываня локальных файлов
+
+7. git rebase origin/master -- rebase our changes on top commits remote master branch // перемещаем HEAD на самый верх
+
+8. git stash pop -- applying our stashed changes on the most top and removing our stash (optionaly can be used git stash apply) // прячем свои изминеня в stash
+
+9. git mergetool -- in case if have merge conflicts after stash applying // 
+
+10. git commit -m 'Message for commit' 
+
+...repeating points 4-10 in depended from commits count... 
+
+11. git checkout master -- go to on local master branch 
+
+12. git pull -- update current branch  
+
+13. git merge local-branch (name our local branch) IMPORTANT: merging local-branch into master but not backward 
+
+in dependent from requirements can be applied flags: 
+--no-ff -- not use fast forward. In this case will be created separated commit. 
+
+// в source tree при слиянии нужно установить галочку "создать новый комит даже если перемотка вперед"
+
+14. git push -- pushing modification to the server 
